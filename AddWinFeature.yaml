@@ -1,0 +1,9 @@
+---
+- name: Add Windows Feature
+  hosts: win
+  become: false
+  tasks: 
+      - name: Adding feature MSMQ
+        win_feature:
+              name: MSMQ
+              state: present
